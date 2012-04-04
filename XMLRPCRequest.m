@@ -1,5 +1,6 @@
 #import "XMLRPCRequest.h"
 #import "XMLRPCEncoder.h"
+#import "XMLRPCEncoderImpl.h"
 
 @implementation XMLRPCRequest
 
@@ -12,7 +13,7 @@
             myRequest = [[NSMutableURLRequest alloc] init];
         }
         
-        myXMLEncoder = [[XMLRPCEncoder alloc] init];
+        myXMLEncoder = [[XMLRPCEncoderImpl alloc] init];
     }
     
     return self;
@@ -43,6 +44,15 @@
 }
 
 #pragma mark -
+
+//XXX:Does Assigning ids cause a leak if the previous assignment isn't free'd?
+- (void)setEncoder:(id<XMLRPCEncoder>)encoder {
+    //Copy the old method and parameters to the new encoder.
+    NSString *method = [myXMLEncoder method];
+    NSArray *parameters = [myXMLEncoder parameters];
+    myXMLEncoder = encoder;
+    [myXMLEncoder setMethod:method withParameters:parameters];
+}
 
 - (void)setMethod: (NSString *)method {
     [myXMLEncoder setMethod: method withParameters: nil];
