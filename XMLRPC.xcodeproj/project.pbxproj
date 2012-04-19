@@ -294,9 +294,9 @@
 				07B0C5FC0E33A659006453B4 /* XMLRPCConnection.m */,
 				075137F90E429E560019E4F6 /* XMLRPCConnectionManager.h */,
 				075137FA0E429E560019E4F6 /* XMLRPCConnectionManager.m */,
-				2DCADED91529E06900B47A4F /* XMLRPCEncoder.h */,
 				07B0C5FF0E33A659006453B4 /* XMLRPCDefaultEncoder.h */,
 				07B0C6000E33A659006453B4 /* XMLRPCDefaultEncoder.m */,
+				2DCADED91529E06900B47A4F /* XMLRPCEncoder.h */,
 				07EF45390E721A5D009F2708 /* XMLRPCEventBasedParser.h */,
 				07EF453A0E721A5D009F2708 /* XMLRPCEventBasedParser.m */,
 				0707047610114B9400CB7702 /* XMLRPCEventBasedParserDelegate.h */,
@@ -445,7 +445,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "XMLRPC" */;
 			compatibilityVersion = "Xcode 3.2";

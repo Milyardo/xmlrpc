@@ -7,7 +7,6 @@
 
 - (void)setMethod: (NSString *)method withParameters: (NSArray *)parameters;
 
-- (void)setParameters: (NSArray*)parameters;
 #pragma mark -
 
 - (NSString *)method;
